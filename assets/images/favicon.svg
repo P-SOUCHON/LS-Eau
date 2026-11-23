@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- LS'Eau favicon: turquoise droplet echoing the company logo -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3fd6e8"/>
+      <stop offset="1" stop-color="#0e8ca0"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 4C41 16 50 26.5 50 38a18 18 0 0 1-36 0C14 26.5 23 16 32 4z" fill="url(#g)"/>
+  <path d="M22 38a10 10 0 0 0 8 11" stroke="#e9f7f9" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+</svg>

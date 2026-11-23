@@ -18,6 +18,8 @@
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png" sizes="57x57">
   <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+  <link rel="preload" href="../assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <script>document.documentElement.classList.add("js");</script>
   <script src="../js/main.js" defer></script>
@@ -70,6 +72,7 @@
 </header>
 <main id="main">
 <div class="page-head">
+  <span class="contours contours--ink" aria-hidden="true"></span>
   <div class="container">
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <ol>
@@ -77,27 +80,33 @@
       <li aria-current="page">Eaux usées</li>
     </ol>
   </nav>
-    <span class="eyebrow">Prestations</span>
+    <div class="page-head__grid"><div><span class="eyebrow">Prestations</span>
     <h1>Eaux usées</h1>
-    <p class="lead">Nous réalisons les études d'assainissement non collectif des eaux usées et nous vous accompagnons jusqu'au terme de votre projet.</p>
+    <p class="lead">Nous réalisons les études d'assainissement non collectif des eaux usées et nous vous accompagnons jusqu'au terme de votre projet.</p></div>  <figure class="page-head__media">
+    <img src="../assets/images/sanitation-trench-729w.webp" srcset="../assets/images/sanitation-trench-480w.webp 480w, ../assets/images/sanitation-trench-729w.webp 729w" sizes="(min-width: 1024px) 35vw, 100vw" width="729" height="972" alt="Tranchée d'épandage creusée pour une filière d'assainissement non collectif" loading="lazy" decoding="async">
+    <figcaption>Terrassement d'une filière d'assainissement non collectif.</figcaption>
+  </figure></div>
   </div>
 </div>
 
 <section class="section" aria-labelledby="expertise-title">
   <div class="container">
-    <div class="expertise-intro">
+    <div class="expertise-intro" data-reveal>
       <h2 id="expertise-title">Notre expertise en assainissement des eaux usées</h2>
     </div>
     <ul class="study-grid">
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.00s">
+      <span class="study-card__index">01</span>
       <h3>Études de sols</h3>
       <p>Pour l'identification des horizons pédologiques en présence avec définition de leur agencement et de leur perméabilité et description de la nappe phréatique qui pourrait se tenir dans ces formations.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.07s">
+      <span class="study-card__index">02</span>
       <h3>Études hydrogéologiques</h3>
       <p>Pour l'évaluation du risque sanitaire induit par la proximité entre la zone disponible pour l'implantation de la filière d'assainissement et le/les captage(s) d'eau potable proche(s).</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.14s">
+      <span class="study-card__index">03</span>
       <h3>Études de conception</h3>
       <p>Pour la définition des caractéristiques techniques de la (des) filière(s) d'assainissement adaptée(s) aux bâtiments du projet.</p>
     </li>
@@ -105,44 +114,40 @@
   </div>
 </section>
 
-<section class="section section--tight-top" aria-label="Photographies de réalisations">
+<section class="section section--tight-top" aria-label="Photographie de réalisation">
   <div class="container">
-    <div class="figure-row">
-  <figure>
-    <img src="../assets/images/manual-soil-auger-1280w.webp" srcset="../assets/images/manual-soil-auger-640w.webp 640w, ../assets/images/manual-soil-auger-1280w.webp 1280w" sizes="(min-width: 960px) 45vw, 100vw" width="1280" height="960" alt="Tarière manuelle posée au sol lors d’une étude de sols en verger" loading="lazy" decoding="async">
-    <figcaption>Sondage à la tarière manuelle lors d’une étude de sols.</figcaption>
+  <figure class="figure-wide" data-reveal>
+    <img src="../assets/images/infiltration-bed-1480w.webp" srcset="../assets/images/infiltration-bed-640w.webp 640w, ../assets/images/infiltration-bed-1280w.webp 1280w, ../assets/images/infiltration-bed-1480w.webp 1480w" sizes="100vw" width="1480" height="366" alt="Filière d'infiltration des eaux usées en cours de construction, lit de gravier" loading="lazy" decoding="async">
+    <figcaption>Filière d'infiltration en cours de réalisation.</figcaption>
   </figure>
-  <figure>
-    <img src="../assets/images/infiltration-bed-1480w.webp" srcset="../assets/images/infiltration-bed-640w.webp 640w, ../assets/images/infiltration-bed-1280w.webp 1280w, ../assets/images/infiltration-bed-1480w.webp 1480w" sizes="(min-width: 960px) 45vw, 100vw" width="1280" height="316" alt="Filière d’infiltration des eaux usées en cours de construction, lit de gravier" loading="lazy" decoding="async">
-    <figcaption>Filière d’infiltration en cours de réalisation.</figcaption>
-  </figure>
-    </div>
   </div>
 </section>
 
 <section class="section section--alt" aria-labelledby="engagement-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container">
     <div class="commitment">
-      <div>
+      <div data-reveal>
         <h2 id="engagement-title">Des projets rationnels conformes à la réglementation.</h2>
         <p>Notre objectif premier est l'élaboration de solutions techniques rationnelles, adaptées à vos projets ainsi qu'à leur environnement, respectant la réglementation et les normes en vigueur.</p>
         <p>L'ensemble des prestations proposées par LS'Eau vise à l'édification de dispositifs de traitement des eaux usées conformes, selon le cas, à l'arrêté du 7 septembre 2009 ou à celui du 21 juillet 2015 et conformes à la norme NF DTU 64.1 d'août 2013.</p>
       </div>
-  <figure>
-    <img src="../assets/images/sanitation-trench-729w.webp" srcset="../assets/images/sanitation-trench-480w.webp 480w, ../assets/images/sanitation-trench-729w.webp 729w" sizes="(min-width: 960px) 45vw, 100vw" width="729" height="972" alt="Tranchée d'épandage creusée pour une filière d'assainissement non collectif" loading="lazy" decoding="async">
-    <figcaption>Terrassement d'une filière d'assainissement non collectif.</figcaption>
+  <figure data-reveal>
+    <img src="../assets/images/manual-soil-auger-1280w.webp" srcset="../assets/images/manual-soil-auger-640w.webp 640w, ../assets/images/manual-soil-auger-1280w.webp 1280w" sizes="(min-width: 1024px) 45vw, 100vw" width="1280" height="960" alt="Tarière manuelle posée au sol lors d'une étude de sols en verger" loading="lazy" decoding="async">
+    <figcaption>Sondage à la tarière manuelle lors d'une étude de sols.</figcaption>
   </figure>
     </div>
   </div>
 </section>
 
 <section class="section cta-band" aria-labelledby="cta-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container cta-band__inner">
-    <div>
+    <div data-reveal>
       <h2 id="cta-title">Nos prestations vous intéressent ? Nous sommes là pour vous aider !</h2>
       <p>Nous voulons en savoir plus sur votre projet pour vous soumettre une offre technico-économique adaptée à vos besoins.</p>
     </div>
-    <div class="cta-band__actions">
+    <div class="cta-band__actions" data-reveal style="--rd:.12s">
       <a class="btn btn--light" href="tel:+33651802623">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         Appelez-nous : 06 51 80 26 23

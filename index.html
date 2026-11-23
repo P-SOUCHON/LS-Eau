@@ -18,11 +18,13 @@
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="57x57">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <link rel="preload" href="assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add("js");</script>
   <script src="js/main.js" defer></script>
 </head>
-<body>
+<body class="has-hero">
 <a class="skip-link" href="#main">Aller au contenu</a>
 <svg xmlns="http://www.w3.org/2000/svg" class="svg-defs" aria-hidden="true" focusable="false">
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
@@ -44,7 +46,7 @@
   <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8 5.7-6"/></symbol>
   <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
 </svg>
-<header class="site-header">
+<header class="site-header site-header--overlay">
   <div class="container header-inner">
     <a class="brand" href="./">
       <img src="assets/images/ls-eau-logo.png" alt="LS'Eau — bureau d'études en hydrogéologie et assainissement" width="203" height="240">
@@ -76,124 +78,131 @@
          sizes="100vw" width="1920" height="1280"
          alt="Atelier de forage d'eau LS'Eau implanté dans un terrain arboré" fetchpriority="high" decoding="async">
   </div>
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container">
     <div class="hero__content">
-      <span class="eyebrow">Bienvenue chez LS'Eau</span>
-      <h1>Votre expert en hydrogéologie et environnement</h1>
-      <p>Études et conception d'ouvrages permettant l'assainissement, la gestion ou l'exploitation de la ressource en eau.</p>
-      <div class="hero__actions">
+      <span class="eyebrow" data-entrance style="--ed:.05s">Bienvenue chez LS'Eau</span>
+      <h1 data-entrance style="--ed:.15s">Votre expert en hydrogéologie et environnement</h1>
+      <p data-entrance style="--ed:.3s">Études et conception d'ouvrages permettant l'assainissement, la gestion ou l'exploitation de la ressource en eau.</p>
+      <div class="hero__actions" data-entrance style="--ed:.45s">
         <a class="btn btn--light" href="#prestations">Découvrir nos prestations</a>
         <a class="btn btn--ghost-light" href="nous-contacter/">Nous contacter</a>
       </div>
     </div>
   </div>
+  <span class="hero__scroll" aria-hidden="true">Défiler</span>
 </section>
 
 <section class="section" id="prestations" aria-labelledby="prestations-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Prestations</span>
+  <div class="container index-layout">
+    <div class="index-aside" data-reveal>
+      <span class="eyebrow">01 · Prestations</span>
       <h2 id="prestations-title">Nos domaines d'expertise</h2>
+      <a class="link-arrow" href="galerie/">Voir le portfolio<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
-    <ul class="card-grid">
-    <li class="service-card">
-      <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-droplet"/></svg></span>
-      <h3>Assainissement non collectif des eaux usées</h3>
-      <p>LS'Eau réalise les études de sols nécessaires à la mise en œuvre de ces ouvrages d'assainissement et vous accompagne jusqu'à l'obtention du visa de conformité délivré par les Services Publics d'Assainissement Non Collectifs (SPANC).</p>
-      <a class="link-arrow" href="assainissement/">En savoir plus<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </li>
-    <li class="service-card">
-      <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></span>
-      <h3>Forages d'eau</h3>
-      <p>LS'Eau réalise un large panel d'études pour la définition de la faisabilité de forages que ce soit pour l'AEP, l'irrigation ou encore la géothermie sur nappe.</p>
-      <a class="link-arrow" href="eaux-souterraines/">En savoir plus<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </li>
-    <li class="service-card">
-      <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rain"/></svg></span>
-      <h3>Gestion des eaux pluviales</h3>
-      <p>LS'Eau étudie et dimensionne les dispositifs de gestion et d'assainissement des eaux pluviales au regard des règlements d'urbanisme locaux et des prescriptions de la Loi sur l'Eau.</p>
-      <a class="link-arrow" href="eaux-pluviales/">En savoir plus<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </li>
-    <li class="service-card">
-      <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></span>
-      <h3>Hydrométrie</h3>
-      <p>LS'Eau réalise une large gamme de prestations d'hydrométrie pour l'évaluation des paramètres qualité et quantité des eaux qu'elles soient usées, souterraines ou superficielles.</p>
-      <a class="link-arrow" href="hydrometrie/">En savoir plus<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </li>
-    <li class="service-card">
-      <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-helmet"/></svg></span>
-      <h3>Assistance à Maîtrise d'Ouvrage</h3>
-      <p>Pour plus de sérénité, LS'Eau vous propose de consulter les entreprises à même de réaliser les travaux décrits dans nos études, de vous aider à faire le meilleur choix de prestataires, de piloter les travaux et de s'assurer de leur bonne exécution.</p>
-      <a class="link-arrow" href="amo/">En savoir plus<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </li>
-    <li class="service-card">
-      <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span>
-      <h3>Dossiers réglementaires</h3>
-      <p>LS'Eau identifie vos besoins et élabore pour vous les dossiers requis au titre des Codes Général des Collectivités Territoriales, de la Santé Publique, de l'Environnement, et du Code Minier.</p>
-      <a class="link-arrow" href="dossiers-reglementaires/">En savoir plus<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </li>
-    </ul>
-    <div class="section-foot">
-      <a class="link-arrow" href="galerie/">Voir le portfolio dans la galerie<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </div>
+    <ol class="service-index">
+      <li data-reveal style="--rd:0.00s">
+        <a href="assainissement/">
+          <span class="service-index__num">01<svg class="icon" aria-hidden="true"><use href="#i-droplet"/></svg></span>
+          <div><h3>Assainissement non collectif des eaux usées</h3><p>LS'Eau réalise les études de sols nécessaires à la mise en œuvre de ces ouvrages d'assainissement et vous accompagne jusqu'à l'obtention du visa de conformité délivré par les Services Publics d'Assainissement Non Collectifs (SPANC).</p></div>
+          <svg class="icon service-index__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </li>
+      <li data-reveal style="--rd:0.06s">
+        <a href="eaux-souterraines/">
+          <span class="service-index__num">02<svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></span>
+          <div><h3>Forages d'eau</h3><p>LS'Eau réalise un large panel d'études pour la définition de la faisabilité de forages que ce soit pour l'AEP, l'irrigation ou encore la géothermie sur nappe.</p></div>
+          <svg class="icon service-index__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </li>
+      <li data-reveal style="--rd:0.12s">
+        <a href="eaux-pluviales/">
+          <span class="service-index__num">03<svg class="icon" aria-hidden="true"><use href="#i-rain"/></svg></span>
+          <div><h3>Gestion des eaux pluviales</h3><p>LS'Eau étudie et dimensionne les dispositifs de gestion et d'assainissement des eaux pluviales au regard des règlements d'urbanisme locaux et des prescriptions de la Loi sur l'Eau.</p></div>
+          <svg class="icon service-index__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </li>
+      <li data-reveal style="--rd:0.18s">
+        <a href="hydrometrie/">
+          <span class="service-index__num">04<svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></span>
+          <div><h3>Hydrométrie</h3><p>LS'Eau réalise une large gamme de prestations d'hydrométrie pour l'évaluation des paramètres qualité et quantité des eaux qu'elles soient usées, souterraines ou superficielles.</p></div>
+          <svg class="icon service-index__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </li>
+      <li data-reveal style="--rd:0.24s">
+        <a href="amo/">
+          <span class="service-index__num">05<svg class="icon" aria-hidden="true"><use href="#i-helmet"/></svg></span>
+          <div><h3>Assistance à Maîtrise d'Ouvrage</h3><p>Pour plus de sérénité, LS'Eau vous propose de consulter les entreprises à même de réaliser les travaux décrits dans nos études, de vous aider à faire le meilleur choix de prestataires, de piloter les travaux et de s'assurer de leur bonne exécution.</p></div>
+          <svg class="icon service-index__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </li>
+      <li data-reveal style="--rd:0.30s">
+        <a href="dossiers-reglementaires/">
+          <span class="service-index__num">06<svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span>
+          <div><h3>Dossiers réglementaires</h3><p>LS'Eau identifie vos besoins et élabore pour vous les dossiers requis au titre des Codes Général des Collectivités Territoriales, de la Santé Publique, de l'Environnement, et du Code Minier.</p></div>
+          <svg class="icon service-index__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </li>
+    </ol>
   </div>
 </section>
 
 <section class="section section--alt" aria-labelledby="about-title">
   <div class="container">
     <div class="about-grid">
-      <div>
-        <span class="eyebrow">Le bureau d'études</span>
-        <h2 id="about-title">Qui sommes-nous ?</h2>
-        <p class="lead">Notre bureau d'études met ses compétences en hydrogéologie et en assainissement au service des particuliers, entreprises et collectivités. Notre équipe expérimentée a le savoir-faire nécessaire pour que nos clients soient pleinement satisfaits de notre travail.</p>
-      </div>
-  <figure>
-    <img src="assets/images/soil-survey-field-1280w.webp" srcset="assets/images/soil-survey-field-640w.webp 640w, assets/images/soil-survey-field-1280w.webp 1280w" sizes="(min-width: 960px) 45vw, 100vw" width="1280" height="960" alt="Matériel d'étude de sols installé dans une oliveraie" loading="lazy" decoding="async">
+  <figure data-reveal>
+    <img src="assets/images/soil-survey-field-1280w.webp" srcset="assets/images/soil-survey-field-640w.webp 640w, assets/images/soil-survey-field-1280w.webp 1280w" sizes="(min-width: 1024px) 45vw, 100vw" width="1280" height="960" alt="Matériel d'étude de sols installé dans une oliveraie" loading="lazy" decoding="async">
     <figcaption>Étude de sols sur le terrain, en amont d'un projet d'assainissement.</figcaption>
   </figure>
+      <div data-reveal>
+        <span class="eyebrow">02 · Le bureau d'études</span>
+        <h2 id="about-title">Qui sommes-nous ?</h2>
+        <p class="lead">Notre bureau d'études met ses compétences en hydrogéologie et en assainissement au service des particuliers, entreprises et collectivités. Notre équipe expérimentée a le savoir-faire nécessaire pour que nos clients soient pleinement satisfaits de notre travail.</p>
+        <ul class="values-list">
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+            <div><h3>Une équipe disponible</h3><p>Nous nous tenons constamment à votre disposition pour répondre à vos questions.</p></div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>
+            <div><h3>Des prestations au plus près de vos besoins</h3><p>Nous prêtons la plus grande attention à vos besoins, attentes et contraintes.</p></div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+            <div><h3>Des solutions rationnelles</h3><p>Nos études de conceptions visent à la mise en œuvre d'ouvrages parfaitement fonctionnels et adaptés à vos projets tant du point de vue technique qu'économique.</p></div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <ul class="values">
-      <li>
-        <h3><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>Une équipe disponible</h3>
-        <p>Nous nous tenons constamment à votre disposition pour répondre à vos questions.</p>
-      </li>
-      <li>
-        <h3><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Des prestations au plus près de vos besoins</h3>
-        <p>Nous prêtons la plus grande attention à vos besoins, attentes et contraintes.</p>
-      </li>
-      <li>
-        <h3><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Des solutions rationnelles</h3>
-        <p>Nos études de conceptions visent à la mise en œuvre d'ouvrages parfaitement fonctionnels et adaptés à vos projets tant du point de vue technique qu'économique.</p>
-      </li>
-    </ul>
   </div>
 </section>
 
 <section class="section" aria-labelledby="realisations-title">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Galerie</span>
-      <h2 id="realisations-title">Nos réalisations en images</h2>
+    <div class="mosaic-head" data-reveal>
+      <div>
+        <span class="eyebrow">03 · Galerie</span>
+        <h2 id="realisations-title">Nos réalisations en images</h2>
+      </div>
+      <a class="link-arrow" href="galerie/">Voir la galerie<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
-    <ul class="photo-strip">
-    <li><a href="galerie/"><img src="assets/images/sanitation-trench-480w.webp" alt="Tranchée d'épandage d'une filière d'assainissement non collectif" width="640" height="480" loading="lazy" decoding="async"></a></li>
-    <li><a href="galerie/"><img src="assets/images/drilling-rig-orchard-480w.webp" alt="Atelier de forage d'eau implanté dans un verger" width="640" height="480" loading="lazy" decoding="async"></a></li>
-    <li><a href="galerie/"><img src="assets/images/drainage-ditch-640w.webp" alt="Fossé empierré de gestion des eaux pluviales en bordure de voirie" width="640" height="480" loading="lazy" decoding="async"></a></li>
-    <li><a href="galerie/"><img src="assets/images/canal-bridge-640w.webp" alt="Canal bordé de maçonnerie avec un pont de pierre" width="640" height="480" loading="lazy" decoding="async"></a></li>
+    <ul class="mosaic">
+      <li data-reveal style="--rd:0.00s"><a href="galerie/"><img src="assets/images/sanitation-trench-480w.webp" alt="Tranchée d'épandage d'une filière d'assainissement non collectif" width="640" height="480" loading="lazy" decoding="async"></a></li>
+      <li data-reveal style="--rd:0.08s"><a href="galerie/"><img src="assets/images/drilling-rig-orchard-480w.webp" alt="Atelier de forage d'eau implanté dans un verger" width="640" height="480" loading="lazy" decoding="async"></a></li>
+      <li data-reveal style="--rd:0.16s"><a href="galerie/"><img src="assets/images/canal-bridge-640w.webp" alt="Canal bordé de maçonnerie avec un pont de pierre" width="640" height="480" loading="lazy" decoding="async"></a></li>
+      <li data-reveal style="--rd:0.24s"><a href="galerie/"><img src="assets/images/drainage-ditch-640w.webp" alt="Fossé empierré de gestion des eaux pluviales en bordure de voirie" width="640" height="480" loading="lazy" decoding="async"></a></li>
     </ul>
-    <div class="section-foot">
-      <a class="btn btn--outline" href="galerie/">Voir la galerie</a>
-    </div>
   </div>
 </section>
 
 <section class="section cta-band" aria-labelledby="cta-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container cta-band__inner">
-    <div>
+    <div data-reveal>
       <h2 id="cta-title">Nos prestations vous intéressent ? Nous sommes là pour vous aider !</h2>
       <p>Nous voulons en savoir plus sur votre projet pour vous soumettre une offre technico-économique adaptée à vos besoins.</p>
     </div>
-    <div class="cta-band__actions">
+    <div class="cta-band__actions" data-reveal style="--rd:.12s">
       <a class="btn btn--light" href="tel:+33651802623">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         Appelez-nous : 06 51 80 26 23

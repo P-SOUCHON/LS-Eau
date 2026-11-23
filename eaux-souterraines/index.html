@@ -18,6 +18,8 @@
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png" sizes="57x57">
   <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+  <link rel="preload" href="../assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <script>document.documentElement.classList.add("js");</script>
   <script src="../js/main.js" defer></script>
@@ -70,6 +72,7 @@
 </header>
 <main id="main">
 <div class="page-head">
+  <span class="contours contours--ink" aria-hidden="true"></span>
   <div class="container">
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <ol>
@@ -77,31 +80,38 @@
       <li aria-current="page">Eaux souterraines</li>
     </ol>
   </nav>
-    <span class="eyebrow">Prestations</span>
+    <div class="page-head__grid"><div><span class="eyebrow">Prestations</span>
     <h1>Eaux souterraines</h1>
-    <p class="lead">Nous élaborons des études de faisabilité et des études de conception visant la création d'ouvrages permettant l'exploitation de la ressource en eaux souterraines.</p>
+    <p class="lead">Nous élaborons des études de faisabilité et des études de conception visant la création d'ouvrages permettant l'exploitation de la ressource en eaux souterraines.</p></div>  <figure class="page-head__media">
+    <img src="../assets/images/drilling-mast-casings-1920w.webp" srcset="../assets/images/drilling-mast-casings-640w.webp 640w, ../assets/images/drilling-mast-casings-1280w.webp 1280w, ../assets/images/drilling-mast-casings-1920w.webp 1920w" sizes="(min-width: 1024px) 35vw, 100vw" width="1920" height="2880" alt="Mât de forage dressé et tubages bleus alignés au sol" loading="lazy" decoding="async">
+    <figcaption>Mât de forage et tubages.</figcaption>
+  </figure></div>
   </div>
 </div>
 
 <section class="section" aria-labelledby="expertise-title">
   <div class="container">
-    <div class="expertise-intro">
+    <div class="expertise-intro" data-reveal>
       <h2 id="expertise-title">Notre expertise en hydrogéologie</h2>
     </div>
     <ul class="study-grid">
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.00s">
+      <span class="study-card__index">01</span>
       <h3>Études de faisabilité administrative</h3>
       <p>Pour la définition du contexte réglementaire dans lequel s'inscrit votre projet de captage d'eaux souterraines et pour s'assurer de sa faisabilité administrative.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.07s">
+      <span class="study-card__index">02</span>
       <h3>Études de faisabilité hydrogéologique</h3>
       <p>Pour l'identification et la caractérisation des ressources en eaux souterraines en présence mais également pour l'estimation des chances de succès d'un forage d'eau sur votre propriété.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.14s">
+      <span class="study-card__index">03</span>
       <h3>Études de conception</h3>
       <p>Pour la définition des caractéristiques techniques de projets de forages ainsi que l'estimation des coûts de travaux.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.21s">
+      <span class="study-card__index">04</span>
       <h3>Études diagnostic</h3>
       <p>Pour la définition des caractéristiques techniques de captages existants ou pour l'identification de l'origine de baisse de productivité de ce type d'ouvrages.</p>
     </li>
@@ -112,11 +122,11 @@
 <section class="section section--tight-top" aria-label="Photographies de réalisations">
   <div class="container">
     <div class="figure-row">
-  <figure>
-    <img src="../assets/images/borehole-flow-1080w.webp" srcset="../assets/images/borehole-flow-640w.webp 640w, ../assets/images/borehole-flow-1080w.webp 1080w" sizes="(min-width: 960px) 45vw, 100vw" width="1080" height="1920" alt="Eau s’écoulant en tête d’un forage en cours de réalisation" loading="lazy" decoding="async">
-    <figcaption>Venue d’eau en tête de forage.</figcaption>
+  <figure data-reveal>
+    <img src="../assets/images/drilling-rig-orchard-729w.webp" srcset="../assets/images/drilling-rig-orchard-480w.webp 480w, ../assets/images/drilling-rig-orchard-729w.webp 729w" sizes="(min-width: 960px) 45vw, 100vw" width="729" height="972" alt="Atelier de forage d’eau implanté dans un verger" loading="lazy" decoding="async">
+    <figcaption>Atelier de forage d’eau en verger.</figcaption>
   </figure>
-  <figure>
+  <figure data-reveal>
     <img src="../assets/images/drilling-discharge-729w.webp" srcset="../assets/images/drilling-discharge-480w.webp 480w, ../assets/images/drilling-discharge-729w.webp 729w" sizes="(min-width: 960px) 45vw, 100vw" width="729" height="972" alt="Eaux de forage rejetées par une canalisation bleue" loading="lazy" decoding="async">
     <figcaption>Rejet des eaux de forage.</figcaption>
   </figure>
@@ -124,29 +134,31 @@
   </div>
 </section>
 
-<section class="section section--alt" aria-labelledby="engagement-title">
+<section class="section section--depth" aria-labelledby="engagement-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container">
     <div class="commitment">
-      <div>
+      <div data-reveal>
         <h2 id="engagement-title">Des études de haute technicité pour des projets rationnels.</h2>
         <p>Notre but premier est de vous fournir un conseil objectif et d'élaborer des projets rationnels, adaptés à vos projets et leur environnement en respectant la réglementation et les normes en vigueur.</p>
         <p>Grâce à notre connaissance approfondie de la géologie régionale et notre parfaite maîtrise des techniques de forage et de la réglementation, nous vous fournissons un conseil des plus éclairés sur la faisabilité de vos projets visant à exploiter les ressources en eaux souterraines.</p>
       </div>
-  <figure>
-    <img src="../assets/images/drilling-rig-orchard-729w.webp" srcset="../assets/images/drilling-rig-orchard-480w.webp 480w, ../assets/images/drilling-rig-orchard-729w.webp 729w" sizes="(min-width: 960px) 45vw, 100vw" width="729" height="972" alt="Atelier de forage d'eau implanté dans un verger" loading="lazy" decoding="async">
-    <figcaption>Atelier de forage d'eau en verger.</figcaption>
+  <figure data-reveal>
+    <img src="../assets/images/borehole-flow-1080w.webp" srcset="../assets/images/borehole-flow-640w.webp 640w, ../assets/images/borehole-flow-1080w.webp 1080w" sizes="(min-width: 1024px) 45vw, 100vw" width="1080" height="1920" alt="Eau s'écoulant en tête d'un forage en cours de réalisation" loading="lazy" decoding="async">
+    <figcaption>Venue d'eau en tête de forage.</figcaption>
   </figure>
     </div>
   </div>
 </section>
 
 <section class="section cta-band" aria-labelledby="cta-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container cta-band__inner">
-    <div>
+    <div data-reveal>
       <h2 id="cta-title">Nos prestations vous intéressent ? Nous sommes là pour vous aider !</h2>
       <p>Nous voulons en savoir plus sur votre projet pour vous soumettre une offre technico-économique adaptée à vos besoins.</p>
     </div>
-    <div class="cta-band__actions">
+    <div class="cta-band__actions" data-reveal style="--rd:.12s">
       <a class="btn btn--light" href="tel:+33651802623">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         Prenez rendez-vous : 06 51 80 26 23

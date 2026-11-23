@@ -1,14 +1,19 @@
 /* ==========================================================================
    LS'Eau — interface scripts (vanilla JS, no dependencies)
    1. Mobile navigation toggle
-   2. Sticky header shadow
-   3. Gallery category filters
-   4. Gallery lightbox (native <dialog>)
+   2. Header transformation (compact + solid after scroll)
+   3. Progressive section reveals (IntersectionObserver)
+   4. Restrained hero parallax
+   5. Gallery category filters
+   6. Gallery lightbox (native <dialog>)
    All features are progressive enhancements: the site remains fully usable
-   without JavaScript (nav links, gallery images and captions are plain HTML).
+   without JavaScript (nav links, gallery images and captions are plain HTML,
+   and reveal targets are only hidden once JS is confirmed running).
    ========================================================================== */
 (function () {
   "use strict";
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   /* 1. Mobile navigation -------------------------------------------------- */
   var toggle = document.querySelector(".nav-toggle");
@@ -47,17 +52,68 @@
     });
   }
 
-  /* 2. Sticky header shadow ------------------------------------------------ */
+  /* 2. Header transformation ---------------------------------------------- */
   var header = document.querySelector(".site-header");
-  if (header) {
-    var onScroll = function () {
-      header.classList.toggle("is-scrolled", window.scrollY > 4);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+  var heroMedia = document.querySelector(".hero__media img");
+  var hero = document.querySelector(".hero");
+  var ticking = false;
+
+  var onScroll = function () {
+    var y = window.scrollY || window.pageYOffset;
+    if (header) header.classList.toggle("is-scrolled", y > 24);
+    document.body.classList.toggle("is-scrolled", y > 24);
+
+    /* 4. Hero parallax: small, clamped, transform-only (no layout shift). */
+    if (heroMedia && hero && !reduceMotion.matches) {
+      var limit = hero.offsetHeight;
+      if (y <= limit) {
+        heroMedia.style.transform = "translate3d(0," + Math.min(y * 0.16, 120) + "px,0)";
+      }
+    }
+    ticking = false;
+  };
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(onScroll);
+      }
+    },
+    { passive: true }
+  );
+  onScroll();
+
+  /* 3. Progressive reveals ------------------------------------------------ */
+  var revealTargets = Array.prototype.slice.call(
+    document.querySelectorAll("[data-reveal]")
+  );
+
+  if (
+    revealTargets.length &&
+    "IntersectionObserver" in window &&
+    !reduceMotion.matches
+  ) {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+    );
+
+    revealTargets.forEach(function (el) {
+      el.classList.add("reveal-init");
+      observer.observe(el);
+    });
   }
 
-  /* 3. Gallery filters ------------------------------------------------------ */
+  /* 5. Gallery filters ------------------------------------------------------ */
   var filterBar = document.querySelector(".gallery-filters");
   var galleryItems = Array.prototype.slice.call(
     document.querySelectorAll(".gallery-grid > li")
@@ -85,7 +141,7 @@
     });
   }
 
-  /* 4. Gallery lightbox ----------------------------------------------------- */
+  /* 6. Gallery lightbox ----------------------------------------------------- */
   var dialog = document.getElementById("lightbox");
   var links = Array.prototype.slice.call(
     document.querySelectorAll(".gallery-grid a[data-lightbox]")

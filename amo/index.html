@@ -18,6 +18,8 @@
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png" sizes="57x57">
   <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+  <link rel="preload" href="../assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <script>document.documentElement.classList.add("js");</script>
   <script src="../js/main.js" defer></script>
@@ -70,6 +72,7 @@
 </header>
 <main id="main">
 <div class="page-head">
+  <span class="contours contours--ink" aria-hidden="true"></span>
   <div class="container">
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <ol>
@@ -85,19 +88,22 @@
 
 <section class="section" aria-labelledby="expertise-title">
   <div class="container">
-    <div class="expertise-intro">
+    <div class="expertise-intro" data-reveal>
       <h2 id="expertise-title">Nos compétences au service des maîtres d'ouvrages</h2>
     </div>
-    <ul class="study-grid">
-    <li class="study-card">
+    <ul class="study-grid study-grid--steps">
+    <li class="study-card" data-reveal style="--rd:0.00s">
+      <span class="study-card__index">01</span>
       <h3>Notre assistance pour la mise en œuvre de vos projets</h3>
       <p>LS'Eau vous assiste dans la mise en œuvre des ouvrages décrits dans nos études de faisabilité traitant de l'assainissement des eaux usées ou de l'exploitation des eaux souterraines.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.07s">
+      <span class="study-card__index">02</span>
       <h3>Assistance en phase préparatoire</h3>
       <p>LS'Eau met sa connaissance des secteurs du BTP à votre service et vous assiste pour consulter les entreprises à même de réaliser les travaux d'assainissement ou de forages prévus et vous aide à faire le meilleur choix de prestataires.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.14s">
+      <span class="study-card__index">03</span>
       <h3>Assistance en phase exécution</h3>
       <p>LS'Eau vous aide à piloter les travaux nécessaires à la mise en œuvre de votre projet et s'assure de leur bonne exécution.</p>
     </li>
@@ -107,7 +113,7 @@
 
 <section class="section section--tight-top" aria-label="Photographie de réalisation">
   <div class="container">
-  <figure class="figure-wide">
+  <figure class="figure-wide" data-reveal>
     <img src="../assets/images/drilling-rig-property-1920w.webp" srcset="../assets/images/drilling-rig-property-640w.webp 640w, ../assets/images/drilling-rig-property-1280w.webp 1280w, ../assets/images/drilling-rig-property-1920w.webp 1920w" sizes="100vw" width="1920" height="435" alt="Atelier de forage chez un particulier, devant une maison" loading="lazy" decoding="async">
     <figcaption>Forage d’eau chez un particulier, accompagné par LS’Eau.</figcaption>
   </figure>
@@ -115,9 +121,10 @@
 </section>
 
 <section class="section section--alt" aria-labelledby="engagement-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container">
     <div class="commitment commitment--text">
-      <div>
+      <div data-reveal>
         <h2 id="engagement-title">Nos compétences à votre service.</h2>
         <p>Notre objectif est de vous accompagner jusqu'au terme de vos projets et de vous assurer de leur bonne exécution.</p>
         <p>Piloter la mise en œuvre des ouvrages que nous prescrivons dans nos études de faisabilité requiert des compétences techniques que nous possédons et que nous mettons à votre service.</p>
@@ -127,12 +134,13 @@
 </section>
 
 <section class="section cta-band" aria-labelledby="cta-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container cta-band__inner">
-    <div>
+    <div data-reveal>
       <h2 id="cta-title">Nos prestations vous intéressent ? Nous sommes là pour vous aider !</h2>
       <p>Nous voulons en savoir plus sur votre projet pour vous soumettre une offre technico-économique adaptée à vos besoins.</p>
     </div>
-    <div class="cta-band__actions">
+    <div class="cta-band__actions" data-reveal style="--rd:.12s">
       <a class="btn btn--light" href="tel:+33651802623">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         Appelez-nous : 06 51 80 26 23

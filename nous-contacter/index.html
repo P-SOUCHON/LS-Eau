@@ -18,6 +18,8 @@
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png" sizes="57x57">
   <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+  <link rel="preload" href="../assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <script>document.documentElement.classList.add("js");</script>
   <script src="../js/main.js" defer></script>
@@ -70,6 +72,7 @@
 </header>
 <main id="main">
 <div class="page-head">
+  <span class="contours contours--ink" aria-hidden="true"></span>
   <div class="container">
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <ol>
@@ -85,24 +88,21 @@
 
 <section class="section" aria-label="Coordonnées">
   <div class="container">
-    <ul class="contact-grid">
-      <li class="contact-card">
-        <span class="contact-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+    <ul class="contact-register">
+      <li data-reveal>
+        <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
         <h2>Téléphone</h2>
-        <p>Nous appeler :</p>
-        <a href="tel:+33651802623">06 51 80 26 23</a>
+        <div class="contact-register__value"><a href="tel:+33651802623">06 51 80 26 23</a><span class="contact-register__hint">Nous appeler</span></div>
       </li>
-      <li class="contact-card">
-        <span class="contact-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+      <li data-reveal style="--rd:.08s">
+        <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
         <h2>E-mail</h2>
-        <p>Envoyez-nous un e-mail :</p>
-        <a href="mailto:contact@ls-eau.fr">contact@ls-eau.fr</a>
+        <div class="contact-register__value"><a href="mailto:contact@ls-eau.fr">contact@ls-eau.fr</a><span class="contact-register__hint">Envoyez-nous un e-mail</span></div>
       </li>
-      <li class="contact-card">
-        <span class="contact-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+      <li data-reveal style="--rd:.16s">
+        <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
         <h2>Adresse</h2>
-        <p>Où nous trouver :</p>
-        <address>389, route des Courses<br>84300 Cavaillon, France</address>
+        <div class="contact-register__value"><address>389, route des Courses<br>84300 Cavaillon, France</address><span class="contact-register__hint">Où nous trouver</span></div>
       </li>
     </ul>
     <p class="contact-sign"><strong>Laurent SOUCHON</strong> — Gérant de LS'Eau</p>
@@ -110,12 +110,13 @@
 </section>
 
 <section class="section cta-band" aria-labelledby="cta-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container cta-band__inner">
-    <div>
+    <div data-reveal>
       <h2 id="cta-title">Nos prestations vous intéressent ? Nous sommes là pour vous aider !</h2>
       <p>Nous voulons en savoir plus sur votre projet pour vous soumettre une offre technico-économique adaptée à vos besoins.</p>
     </div>
-    <div class="cta-band__actions">
+    <div class="cta-band__actions" data-reveal style="--rd:.12s">
       <a class="btn btn--light" href="tel:+33651802623">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         Appelez-nous : 06 51 80 26 23

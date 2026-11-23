@@ -18,6 +18,8 @@
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png" sizes="57x57">
   <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+  <link rel="preload" href="../assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <script>document.documentElement.classList.add("js");</script>
   <script src="../js/main.js" defer></script>
@@ -70,6 +72,7 @@
 </header>
 <main id="main">
 <div class="page-head">
+  <span class="contours contours--ink" aria-hidden="true"></span>
   <div class="container">
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <ol>
@@ -83,21 +86,28 @@
   </div>
 </div>
 
+<figure class="photo-band" data-reveal>
+  <img src="../assets/images/drainage-ditch-1413w.webp" srcset="../assets/images/drainage-ditch-640w.webp 640w, ../assets/images/drainage-ditch-1280w.webp 1280w, ../assets/images/drainage-ditch-1413w.webp 1413w" sizes="100vw" width="1413" height="576" alt="Fossé empierré longeant une route, destiné à la gestion des eaux pluviales" loading="lazy" decoding="async">
+  <figcaption>Fossé empierré de gestion des eaux pluviales en bordure de voirie.</figcaption>
+</figure>
 <section class="section" aria-labelledby="expertise-title">
   <div class="container">
-    <div class="expertise-intro">
+    <div class="expertise-intro" data-reveal>
       <h2 id="expertise-title">Notre expertise en gestion des eaux pluviales</h2>
     </div>
     <ul class="study-grid">
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.00s">
+      <span class="study-card__index">01</span>
       <h3>Études hydrauliques</h3>
       <p>Pour la définition des volumes et débits d'eaux pluviales à prendre en compte dans le dimensionnement des filières de gestion et d'assainissement des eaux de ruissellement.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.07s">
+      <span class="study-card__index">02</span>
       <h3>Études de sols</h3>
       <p>Pour la définition des contraintes pédologiques et hydrogéologiques pouvant avoir un impact sur la conception des dispositifs de gestion et d'assainissement des eaux pluviales.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.14s">
+      <span class="study-card__index">03</span>
       <h3>Études de conception</h3>
       <p>Pour la définition des caractéristiques techniques des filières de gestion et d'assainissement des eaux de ruissellement adaptées à votre projet.</p>
     </li>
@@ -106,28 +116,26 @@
 </section>
 
 <section class="section section--alt" aria-labelledby="engagement-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container">
-    <div class="commitment">
-      <div>
+    <div class="commitment commitment--text">
+      <div data-reveal>
         <h2 id="engagement-title">Concertation / Maîtrise technique et réglementaire.</h2>
         <p>Afin d'élaborer des projets de filières de gestion et d'assainissement des eaux pluviales rationnelles, nous consacrons toute l'énergie nécessaire pour parfaire notre connaissance de vos projets et des contraintes techniques et réglementaires attenantes.</p>
         <p>Pleinement conscient de la complexité à concevoir des projets immobiliers sur lesquels doivent se greffer des dispositifs de gestion des eaux pluviales, nous usons de notre capacité à la concertation pour proposer des solutions techniques réglementaires et rationnelles aisément intégrables.</p>
       </div>
-  <figure>
-    <img src="../assets/images/drainage-ditch-1413w.webp" srcset="../assets/images/drainage-ditch-640w.webp 640w, ../assets/images/drainage-ditch-1280w.webp 1280w, ../assets/images/drainage-ditch-1413w.webp 1413w" sizes="(min-width: 960px) 45vw, 100vw" width="1413" height="576" alt="Fossé empierré longeant une route, destiné à la gestion des eaux pluviales" loading="lazy" decoding="async">
-    <figcaption>Fossé empierré de gestion des eaux pluviales en bordure de voirie.</figcaption>
-  </figure>
     </div>
   </div>
 </section>
 
 <section class="section cta-band" aria-labelledby="cta-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container cta-band__inner">
-    <div>
+    <div data-reveal>
       <h2 id="cta-title">Nos prestations vous intéressent ? Nous sommes là pour vous aider !</h2>
       <p>Nous voulons en savoir plus sur votre projet pour vous soumettre une offre technico-économique adaptée à vos besoins.</p>
     </div>
-    <div class="cta-band__actions">
+    <div class="cta-band__actions" data-reveal style="--rd:.12s">
       <a class="btn btn--light" href="tel:+33651802623">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         Appelez-nous : 06 51 80 26 23

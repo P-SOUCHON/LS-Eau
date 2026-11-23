@@ -18,6 +18,8 @@
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png" sizes="57x57">
   <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+  <link rel="preload" href="../assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <script>document.documentElement.classList.add("js");</script>
   <script src="../js/main.js" defer></script>
@@ -70,6 +72,7 @@
 </header>
 <main id="main">
 <div class="page-head">
+  <span class="contours contours--ink" aria-hidden="true"></span>
   <div class="container">
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <ol>
@@ -85,20 +88,23 @@
 
 <section class="section" aria-labelledby="expertise-title">
   <div class="container">
-    <div class="expertise-intro">
+    <div class="expertise-intro" data-reveal>
       <h2 id="expertise-title">Notre maîtrise de la réglementation en matière d'environnement</h2>
     </div>
     <ul class="study-grid">
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.00s">
+      <span class="study-card__index">01</span>
       <h3>Eaux potables</h3>
       <p>LS'Eau élabore les dossiers de demande d'autorisation, requis au titre du Code de la Santé Publique, pour l'alimentation en eau potable, à partir d'un captage privé, de vos établissements recevant du public.</p>
       <p>Les dossiers de déclarations de captages privés requis au titre du Code Général des Collectivités Territoriales et du Code Minier.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.07s">
+      <span class="study-card__index">02</span>
       <h3>Eaux pluviales</h3>
       <p>LS'Eau élabore les dossiers de déclaration, requis au titre du Code de l'Environnement, pour la mise en œuvre de dispositifs de gestion et assainissement des eaux pluviales desservant un bassin versant naturel d'une superficie de moins de 20 hectares.</p>
     </li>
-    <li class="study-card">
+    <li class="study-card" data-reveal style="--rd:0.14s">
+      <span class="study-card__index">03</span>
       <h3>Eaux pour la géothermie sur nappe</h3>
       <p>LS'Eau élabore les dossiers de déclaration, requis au titre du Code minier pour l'exploitation de la ressource en eaux souterraines dans le but de faire fonctionner une pompe à chaleur sur nappe.</p>
     </li>
@@ -108,20 +114,21 @@
 
 <section class="section section--tight-top" aria-labelledby="codes-title">
   <div class="container">
-    <h2 id="codes-title">Les cadres réglementaires concernés</h2>
-    <ul class="code-refs">
-      <li><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Code de la Santé Publique</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Code Général des Collectivités Territoriales</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Code de l'Environnement</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Code Minier</li>
+    <div data-reveal><h2 id="codes-title">Les cadres réglementaires concernés</h2></div>
+    <ul class="code-register">
+      <li data-reveal><span class="code-register__num">R.01</span><span class="code-register__name">Code de la Santé Publique</span><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></li>
+      <li data-reveal style="--rd:.06s"><span class="code-register__num">R.02</span><span class="code-register__name">Code Général des Collectivités Territoriales</span><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></li>
+      <li data-reveal style="--rd:.12s"><span class="code-register__num">R.03</span><span class="code-register__name">Code de l'Environnement</span><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></li>
+      <li data-reveal style="--rd:.18s"><span class="code-register__num">R.04</span><span class="code-register__name">Code Minier</span><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></li>
     </ul>
   </div>
 </section>
 
 <section class="section section--alt" aria-labelledby="engagement-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container">
     <div class="commitment commitment--text">
-      <div>
+      <div data-reveal>
         <h2 id="engagement-title">Notre maîtrise de la réglementation pour plus d'efficacité dans vos projets.</h2>
         <p>Notre mission : vous aider à identifier vos besoins en termes de dossiers réglementaires et élaborer les documents requis pour que vos projets avancent.</p>
         <p>Grâce à notre maîtrise de la réglementation en matière d'environnement, nous sommes à même de vous guider efficacement dans la conduite des procédures administratives à mener pour les déclarations et demandes d'autorisations réglementaires indispensables avant la mise en œuvre de vos projets.</p>
@@ -131,12 +138,13 @@
 </section>
 
 <section class="section cta-band" aria-labelledby="cta-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container cta-band__inner">
-    <div>
+    <div data-reveal>
       <h2 id="cta-title">Nos prestations vous intéressent ? Nous sommes là pour vous aider !</h2>
       <p>Nous voulons en savoir plus sur votre projet pour vous soumettre une offre technico-économique adaptée à vos besoins.</p>
     </div>
-    <div class="cta-band__actions">
+    <div class="cta-band__actions" data-reveal style="--rd:.12s">
       <a class="btn btn--light" href="tel:+33651802623">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         Prenez rendez-vous : 06 51 80 26 23

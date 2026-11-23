@@ -18,6 +18,8 @@
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png" sizes="57x57">
   <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+  <link rel="preload" href="../assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <script>document.documentElement.classList.add("js");</script>
   <script src="../js/main.js" defer></script>
@@ -70,6 +72,7 @@
 </header>
 <main id="main">
 <div class="page-head">
+  <span class="contours contours--ink" aria-hidden="true"></span>
   <div class="container">
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <ol>
@@ -83,7 +86,7 @@
   </div>
 </div>
 
-<section class="section section--tight-top" aria-label="Photographies de réalisations">
+<section class="section" aria-label="Photographies de réalisations">
   <div class="container">
     <div class="gallery-filters" role="group" aria-label="Filtrer les photos par catégorie">
       <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Tout</button>
@@ -93,7 +96,7 @@
       <button class="filter-btn" type="button" data-filter="superficiel" aria-pressed="false">Eaux superficielles</button>
     </div>
     <ul class="gallery-grid">
-    <li data-category="anc">
+    <li data-category="anc" data-reveal style="--rd:0.00s">
       <figure>
         <a href="../assets/images/soil-survey-field-1280w.webp" data-lightbox data-caption="Étude de sols : terrain d'assainissement non collectif">
           <img src="../assets/images/soil-survey-field-640w.webp" alt="Matériel d'étude de sols installé dans une oliveraie" width="640" height="480" loading="lazy" decoding="async">
@@ -101,7 +104,7 @@
         <figcaption>Étude de sols : terrain d'assainissement non collectif</figcaption>
       </figure>
     </li>
-    <li data-category="anc">
+    <li data-category="anc" data-reveal style="--rd:0.07s">
       <figure>
         <a href="../assets/images/sanitation-trench-729w.webp" data-lightbox data-caption="Tranchée d'épandage — assainissement non collectif">
           <img src="../assets/images/sanitation-trench-480w.webp" alt="Tranchée d'épandage creusée pour une filière d'assainissement non collectif" width="640" height="480" loading="lazy" decoding="async">
@@ -109,7 +112,7 @@
         <figcaption>Tranchée d'épandage — assainissement non collectif</figcaption>
       </figure>
     </li>
-    <li data-category="anc">
+    <li data-category="anc" data-reveal style="--rd:0.14s">
       <figure>
         <a href="../assets/images/manual-soil-auger-1280w.webp" data-lightbox data-caption="Sondage à la tarière manuelle — étude de sols">
           <img src="../assets/images/manual-soil-auger-640w.webp" alt="Tarière manuelle posée au sol lors d'une étude de sols en verger" width="640" height="480" loading="lazy" decoding="async">
@@ -117,7 +120,7 @@
         <figcaption>Sondage à la tarière manuelle — étude de sols</figcaption>
       </figure>
     </li>
-    <li data-category="anc">
+    <li data-category="anc" data-reveal style="--rd:0.00s">
       <figure>
         <a href="../assets/images/infiltration-bed-1480w.webp" data-lightbox data-caption="Filière d'infiltration en cours de réalisation">
           <img src="../assets/images/infiltration-bed-640w.webp" alt="Filière d'infiltration des eaux usées en cours de construction, lit de gravier" width="640" height="480" loading="lazy" decoding="async">
@@ -125,7 +128,7 @@
         <figcaption>Filière d'infiltration en cours de réalisation</figcaption>
       </figure>
     </li>
-    <li data-category="forage">
+    <li data-category="forage" data-reveal style="--rd:0.07s">
       <figure>
         <a href="../assets/images/drilling-rig-orchard-729w.webp" data-lightbox data-caption="Atelier de forage en verger">
           <img src="../assets/images/drilling-rig-orchard-480w.webp" alt="Atelier de forage d'eau implanté dans un verger" width="640" height="480" loading="lazy" decoding="async">
@@ -133,7 +136,7 @@
         <figcaption>Atelier de forage en verger</figcaption>
       </figure>
     </li>
-    <li data-category="forage">
+    <li data-category="forage" data-reveal style="--rd:0.14s">
       <figure>
         <a href="../assets/images/borehole-flow-1080w.webp" data-lightbox data-caption="Venue d'eau en tête de forage">
           <img src="../assets/images/borehole-flow-640w.webp" alt="Eau s'écoulant en tête d'un forage en cours de réalisation" width="640" height="480" loading="lazy" decoding="async">
@@ -141,7 +144,7 @@
         <figcaption>Venue d'eau en tête de forage</figcaption>
       </figure>
     </li>
-    <li data-category="forage">
+    <li data-category="forage" data-reveal style="--rd:0.00s">
       <figure>
         <a href="../assets/images/drilling-discharge-729w.webp" data-lightbox data-caption="Rejet des eaux de forage">
           <img src="../assets/images/drilling-discharge-480w.webp" alt="Eaux de forage rejetées par une canalisation bleue" width="640" height="480" loading="lazy" decoding="async">
@@ -149,7 +152,7 @@
         <figcaption>Rejet des eaux de forage</figcaption>
       </figure>
     </li>
-    <li data-category="forage">
+    <li data-category="forage" data-reveal style="--rd:0.07s">
       <figure>
         <a href="../assets/images/piezometric-reel-1280w.webp" data-lightbox data-caption="Sonde piézométrique en bordure de captage">
           <img src="../assets/images/piezometric-reel-640w.webp" alt="Dévidoir de sonde piézométrique bleu installé près d'un captage" width="640" height="480" loading="lazy" decoding="async">
@@ -157,7 +160,7 @@
         <figcaption>Sonde piézométrique en bordure de captage</figcaption>
       </figure>
     </li>
-    <li data-category="forage">
+    <li data-category="forage" data-reveal style="--rd:0.14s">
       <figure>
         <a href="../assets/images/drilling-mast-casings-1920w.webp" data-lightbox data-caption="Mât de forage et tubages">
           <img src="../assets/images/drilling-mast-casings-640w.webp" alt="Mât de forage dressé et tubages bleus alignés au sol" width="640" height="480" loading="lazy" decoding="async">
@@ -165,7 +168,7 @@
         <figcaption>Mât de forage et tubages</figcaption>
       </figure>
     </li>
-    <li data-category="forage">
+    <li data-category="forage" data-reveal style="--rd:0.00s">
       <figure>
         <a href="../assets/images/drilling-rig-cypress-1920w.webp" data-lightbox data-caption="Forage d'eau en terrain arboré">
           <img src="../assets/images/drilling-rig-cypress-640w.webp" alt="Atelier de forage d'eau au milieu de cyprès" width="640" height="480" loading="lazy" decoding="async">
@@ -173,7 +176,7 @@
         <figcaption>Forage d'eau en terrain arboré</figcaption>
       </figure>
     </li>
-    <li data-category="forage">
+    <li data-category="forage" data-reveal style="--rd:0.07s">
       <figure>
         <a href="../assets/images/drilling-rig-property-1920w.webp" data-lightbox data-caption="Forage chez un particulier">
           <img src="../assets/images/drilling-rig-property-640w.webp" alt="Atelier de forage chez un particulier, devant une maison" width="640" height="480" loading="lazy" decoding="async">
@@ -181,7 +184,7 @@
         <figcaption>Forage chez un particulier</figcaption>
       </figure>
     </li>
-    <li data-category="pluvial">
+    <li data-category="pluvial" data-reveal style="--rd:0.14s">
       <figure>
         <a href="../assets/images/drainage-ditch-1413w.webp" data-lightbox data-caption="Fossé empierré de gestion des eaux pluviales">
           <img src="../assets/images/drainage-ditch-640w.webp" alt="Fossé empierré longeant une route, destiné à la gestion des eaux pluviales" width="640" height="480" loading="lazy" decoding="async">
@@ -189,7 +192,7 @@
         <figcaption>Fossé empierré de gestion des eaux pluviales</figcaption>
       </figure>
     </li>
-    <li data-category="superficiel">
+    <li data-category="superficiel" data-reveal style="--rd:0.00s">
       <figure>
         <a href="../assets/images/pond-dusk-1920w.webp" data-lightbox data-caption="Plan d'eau — eaux superficielles">
           <img src="../assets/images/pond-dusk-640w.webp" alt="Plan d'eau au crépuscule, eaux superficielles" width="640" height="480" loading="lazy" decoding="async">
@@ -197,7 +200,7 @@
         <figcaption>Plan d'eau — eaux superficielles</figcaption>
       </figure>
     </li>
-    <li data-category="superficiel">
+    <li data-category="superficiel" data-reveal style="--rd:0.07s">
       <figure>
         <a href="../assets/images/canal-bridge-1920w.webp" data-lightbox data-caption="Canal — eaux superficielles">
           <img src="../assets/images/canal-bridge-640w.webp" alt="Canal en eau bordé de maçonnerie, avec un pont de pierre" width="640" height="480" loading="lazy" decoding="async">
@@ -230,12 +233,13 @@
 </dialog>
 
 <section class="section cta-band" aria-labelledby="cta-title">
+  <span class="contours contours--paper" aria-hidden="true"></span>
   <div class="container cta-band__inner">
-    <div>
+    <div data-reveal>
       <h2 id="cta-title">Nos prestations vous intéressent ? Nous sommes là pour vous aider !</h2>
       <p>Nous voulons en savoir plus sur votre projet pour vous soumettre une offre technico-économique adaptée à vos besoins.</p>
     </div>
-    <div class="cta-band__actions">
+    <div class="cta-band__actions" data-reveal style="--rd:.12s">
       <a class="btn btn--light" href="tel:+33651802623">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         Appelez-nous : 06 51 80 26 23

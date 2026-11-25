@@ -74,38 +74,56 @@
 <div class="page-head">
   <span class="contours contours--ink" aria-hidden="true"></span>
   <div class="container">
-  <nav class="breadcrumb" aria-label="Fil d'Ariane">
-    <ol>
-      <li><a href="../">Accueil</a></li>
-      <li aria-current="page">Contact</li>
-    </ol>
-  </nav>
-    <span class="eyebrow">Contact</span>
+    <div class="page-head__top">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ol>
+        <li><a href="../">Accueil</a></li>
+        <li aria-current="page">Contact</li>
+      </ol>
+    </nav>
+      <p class="page-head__label">Coordonnées</p>
+    </div>
     <h1>Nous contacter</h1>
     <p class="lead">Si vous avez des questions à propos de nos prestations, veuillez nous contacter par e-mail ou par téléphone : nous vous répondrons dans les plus brefs délais. Vous avez aussi la possibilité de nous appeler pendant nos heures d'ouverture. Nous espérons avoir de vos nouvelles bientôt !</p>
   </div>
 </div>
 
-<section class="section" aria-label="Coordonnées">
+<section class="section" aria-label="Coordonnées et localisation">
   <div class="container">
-    <ul class="contact-register">
-      <li data-reveal>
-        <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
-        <h2>Téléphone</h2>
-        <div class="contact-register__value"><a href="tel:+33651802623">06 51 80 26 23</a><span class="contact-register__hint">Nous appeler</span></div>
-      </li>
-      <li data-reveal style="--rd:.08s">
-        <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
-        <h2>E-mail</h2>
-        <div class="contact-register__value"><a href="mailto:contact@ls-eau.fr">contact@ls-eau.fr</a><span class="contact-register__hint">Envoyez-nous un e-mail</span></div>
-      </li>
-      <li data-reveal style="--rd:.16s">
-        <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
-        <h2>Adresse</h2>
-        <div class="contact-register__value"><address>389, route des Courses<br>84300 Cavaillon, France</address><span class="contact-register__hint">Où nous trouver</span></div>
-      </li>
-    </ul>
-    <p class="contact-sign"><strong>Laurent SOUCHON</strong> — Gérant de LS'Eau</p>
+    <div class="contact-layout">
+      <div class="contact-layout__info">
+        <ul class="contact-register">
+          <li data-reveal>
+            <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <h2>Téléphone</h2>
+            <div class="contact-register__value"><a href="tel:+33651802623">06 51 80 26 23</a><span class="contact-register__hint">Nous appeler</span></div>
+          </li>
+          <li data-reveal style="--rd:.08s">
+            <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+            <h2>E-mail</h2>
+            <div class="contact-register__value"><a href="mailto:contact@ls-eau.fr">contact@ls-eau.fr</a><span class="contact-register__hint">Envoyez-nous un e-mail</span></div>
+          </li>
+          <li data-reveal style="--rd:.16s">
+            <span class="contact-register__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <h2>Adresse</h2>
+            <div class="contact-register__value"><address>389, route des Courses<br>84300 Cavaillon, France</address><span class="contact-register__hint">Où nous trouver</span></div>
+          </li>
+        </ul>
+        <p class="contact-sign"><strong>Laurent SOUCHON</strong> — Gérant de LS'Eau</p>
+      </div>
+      <aside class="contact-map" aria-labelledby="map-title" data-reveal style="--rd:.2s">
+        <h2 id="map-title" class="contact-map__title">Nous trouver à Cavaillon</h2>
+        <div class="contact-map__frame">
+          <iframe
+            title="Carte OpenStreetMap — LS'Eau, 389 route des Courses, 84300 Cavaillon"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=5.037786%2C43.827722%2C5.047786%2C43.833722&amp;layer=mapnik&amp;marker=43.830722%2C5.042786"
+            width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="contact-map__note">Siège de LS'Eau : 389, route des Courses, 84300 Cavaillon.<br>
+          <a href="https://www.openstreetmap.org/?mlat=43.830722&amp;mlon=5.042786#map=17/43.830722/5.042786" target="_blank" rel="noopener">Ouvrir la carte dans OpenStreetMap</a></p>
+        <p class="contact-map__credit">Fond cartographique © les <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">contributeurs OpenStreetMap</a>.</p>
+      </aside>
+    </div>
   </div>
 </section>
 
@@ -176,6 +194,7 @@
     </div>
     <div class="footer-bottom">
       <p>Copyright © LS'Eau — Tous droits réservés.</p>
+      <p class="footer-credit">Conception et développement : Pierre Souchon</p>
       <p><a href="../mentions-legales/">Mentions légales</a></p>
     </div>
   </div>

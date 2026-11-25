@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <script>if(location.protocol!=="file:"){document.write('<base href="/">');}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page introuvable — LS'Eau, bureau d'études en hydrogéologie et assainissement</title>
   <meta name="description" content="La page demandée n'existe pas ou a été déplacée.">
@@ -15,14 +16,14 @@
   <meta property="og:image" content="https://www.ls-eau.fr/assets/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0e2c4c">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png" sizes="57x57">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png">
-  <link rel="preload" href="/assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="57x57">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <link rel="preload" href="assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add("js");</script>
-  <script src="/js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
   <meta name="robots" content="noindex">
 </head>
 <body>
@@ -49,8 +50,8 @@
 </svg>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/">
-      <img src="/assets/images/ls-eau-logo.png" alt="LS'Eau — bureau d'études en hydrogéologie et assainissement" width="203" height="240">
+    <a class="brand" href="./">
+      <img src="assets/images/ls-eau-logo.png" alt="LS'Eau — bureau d'études en hydrogéologie et assainissement" width="203" height="240">
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
       <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
@@ -58,61 +59,78 @@
     </button>
     <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
       <ul>
-        <li><a href="/" aria-current="page">Accueil</a></li>
-        <li><a href="/assainissement/">Eaux usées</a></li>
-        <li><a href="/eaux-pluviales/">Eaux pluviales</a></li>
-        <li><a href="/eaux-souterraines/">Eaux souterraines</a></li>
-        <li><a href="/hydrometrie/">Hydrométrie</a></li>
-        <li><a href="/amo/">AMO</a></li>
-        <li><a href="/dossiers-reglementaires/">Dossiers réglementaires</a></li>
-        <li><a href="/galerie/">Galerie</a></li>
-        <li class="nav-contact"><a href="/nous-contacter/">Contact</a></li>
+        <li><a href="./" aria-current="page">Accueil</a></li>
+        <li><a href="assainissement/">Eaux usées</a></li>
+        <li><a href="eaux-pluviales/">Eaux pluviales</a></li>
+        <li><a href="eaux-souterraines/">Eaux souterraines</a></li>
+        <li><a href="hydrometrie/">Hydrométrie</a></li>
+        <li><a href="amo/">AMO</a></li>
+        <li><a href="dossiers-reglementaires/">Dossiers réglementaires</a></li>
+        <li><a href="galerie/">Galerie</a></li>
+        <li class="nav-contact"><a href="nous-contacter/">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 <main id="main">
-<div class="page-head">
-  <div class="container">
-    <span class="eyebrow">Erreur 404</span>
-    <h1>Page introuvable</h1>
-    <p class="lead">La page demandée n'existe pas ou a été déplacée.</p>
-  </div>
-</div>
-<div class="section">
-  <div class="container">
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="/">Retour à l'accueil</a>
-      <a class="btn btn--outline" href="/nous-contacter/">Nous contacter</a>
+<section class="notfound" aria-labelledby="notfound-title">
+  <span class="contours contours--ink notfound__contours" aria-hidden="true"></span>
+  <span class="notfound__strata" aria-hidden="true"></span>
+  <div class="container notfound__inner">
+    <p class="notfound__code" aria-hidden="true">404</p>
+    <div class="notfound__grid">
+      <div class="notfound__main">
+        <p class="notfound__eyebrow">Erreur 404 · secteur non cartographié</p>
+        <h1 id="notfound-title">Page introuvable</h1>
+        <p class="notfound__line">Cette page s'est perdue dans la nappe.</p>
+        <p class="lead">La page demandée n'existe pas ou a été déplacée. Revenez à l'accueil, ou rejoignez directement l'une de nos prestations.</p>
+        <div class="hero__actions notfound__actions">
+          <a class="btn btn--primary" href="/">Retour à l'accueil</a>
+          <a class="btn btn--outline" href="/nous-contacter/">Nous contacter</a>
+        </div>
+        <p class="notfound__coords" aria-hidden="true"><span>43.830722° N</span><span>5.042786° E</span><span>Cavaillon</span></p>
+      </div>
+      <nav class="notfound__services" aria-label="Accès direct aux prestations">
+        <p class="notfound__caption">Prestations</p>
+        <ul>
+          <li><a href="/assainissement/"><span>01</span>Eaux usées</a></li>
+          <li><a href="/eaux-pluviales/"><span>02</span>Eaux pluviales</a></li>
+          <li><a href="/eaux-souterraines/"><span>03</span>Eaux souterraines</a></li>
+          <li><a href="/hydrometrie/"><span>04</span>Hydrométrie</a></li>
+          <li><a href="/amo/"><span>05</span>AMO</a></li>
+          <li><a href="/dossiers-reglementaires/"><span>06</span>Dossiers réglementaires</a></li>
+          <li><a href="/galerie/"><span>07</span>Galerie</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
-</div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/assets/images/ls-eau-logo.png" alt="LS'Eau" width="203" height="240" loading="lazy">
+        <img src="assets/images/ls-eau-logo.png" alt="LS'Eau" width="203" height="240" loading="lazy">
         <p>Bureau d'études en hydrogéologie et assainissement. Études et conception d'ouvrages pour l'assainissement, la gestion ou l'exploitation de la ressource en eau.</p>
       </div>
       <nav aria-label="Prestations">
         <h2>Prestations</h2>
         <ul>
-          <li><a href="/assainissement/">Eaux usées</a></li>
-          <li><a href="/eaux-pluviales/">Eaux pluviales</a></li>
-          <li><a href="/eaux-souterraines/">Eaux souterraines</a></li>
-          <li><a href="/hydrometrie/">Hydrométrie</a></li>
-          <li><a href="/amo/">AMO</a></li>
-          <li><a href="/dossiers-reglementaires/">Dossiers réglementaires</a></li>
+          <li><a href="assainissement/">Eaux usées</a></li>
+          <li><a href="eaux-pluviales/">Eaux pluviales</a></li>
+          <li><a href="eaux-souterraines/">Eaux souterraines</a></li>
+          <li><a href="hydrometrie/">Hydrométrie</a></li>
+          <li><a href="amo/">AMO</a></li>
+          <li><a href="dossiers-reglementaires/">Dossiers réglementaires</a></li>
         </ul>
       </nav>
       <nav aria-label="Informations">
         <h2>Informations</h2>
         <ul>
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/galerie/">Galerie</a></li>
-          <li><a href="/nous-contacter/">Contact</a></li>
-          <li><a href="/mentions-legales/">Mentions légales</a></li>
+          <li><a href="./">Accueil</a></li>
+          <li><a href="galerie/">Galerie</a></li>
+          <li><a href="nous-contacter/">Contact</a></li>
+          <li><a href="mentions-legales/">Mentions légales</a></li>
         </ul>
       </nav>
       <div>
@@ -135,7 +153,8 @@
     </div>
     <div class="footer-bottom">
       <p>Copyright © LS'Eau — Tous droits réservés.</p>
-      <p><a href="/mentions-legales/">Mentions légales</a></p>
+      <p class="footer-credit">Conception et développement : Pierre Souchon</p>
+      <p><a href="mentions-legales/">Mentions légales</a></p>
     </div>
   </div>
 </footer>
